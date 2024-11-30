@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         YouTube 2012 Cosmic Panda Polisher
-// @version      2.1
+// @name         YouTube 2012 w
+// @version      2.2
 // @author       DeadFrekk
-// @description  Fixes weird white thing on the left be gone! for Startube and Project Porapis V3. Also other stuff
+// @description  Fixes weird white thing on the left be gone! for Startube and Project Porapis V3
 // @match        *://*.youtube.com/*
 // @run-at       document-end
 // @grant        none
@@ -10,6 +10,21 @@
 
 (function() {
     'use strict';
-    document.querySelector("#appbar-guide-menu").innerHTML += "<style>.oz-default-panel-content{min-height: 300px;} @media screen and (max-width: 1200px) {.site-center-aligned #appbar-guide-menu::before {background: transparent;}}</style>";
+    try{
+        document.querySelector("#appbar-guide-menu").innerHTML += "<style>.oz-default-panel-content{min-height: 300px;z-index:-1;} @media screen and (max-width: 1200px) {.site-center-aligned #appbar-guide-menu::before {background: transparent;}}</style>";
+    }
+    catch{
+
+    }
+    //document.querySelector(".html5-video-player").innerHTML += "<style>.html5-video-player{z-index:0;}</style>";
+    //document.querySelector("#content").innerHTML += "<style>#alt-watch9-container{padding-left:0;}</style>";
+
+    try{ // fix incorrect zindex. notif is under video
+        document.querySelector("#sb-wrapper").style.zIndex = 999
+    }
+    catch{
+
+    }
+
 })();
 
