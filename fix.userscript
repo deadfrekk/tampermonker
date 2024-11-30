@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         YouTube 2012 Low Res Fix
-// @version      1.6
+// @version      2
 // @author       DeadFrekk
 // @description  Fixes weird white thing on the left be gone! for Startube and Project Porapis V3
 // @match        *://*.youtube.com/*
@@ -11,5 +11,6 @@
 
 (function() {
     'use strict';
-    document.querySelector("#content").innerHTML += "<style>@media screen and (max-width: 1200px) {.site-center-aligned #appbar-guidemenu:after {content: '';position: absolute;top: 0;right: 5px;width: 5px;height: 100%;background: transparent;box-shadow: 5px 0 15px 5px rgb(0 0 0 / 10%);z-index: -1;}.site-center-aligned #appbar-guide-menu:before {content: '';position: absolute;top: 0;right: 5px;width: 16px;height: 100%;background: rgba(0,0,0,0);}}</style>";
+    document.querySelector("#player").innerHTML += "<style>@media screen and (max-width: 1200px) {.site-center-aligned #appbar-guide-menu::before {background: transparent;}}</style>";
 })();
+
