@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         StarTube
 // @namespace    http://tampermonkey.net/
-// @version      2.3.1.1 (frekkedit)
+// @version      2.3.1.2 (frekkedit)
 // @description  More layouts and customization options for V3
 // @author       lightbeam24
 // @match        *://*.youtube.com/*
@@ -18482,7 +18482,7 @@ html:not([exp-watch9-no-owner]) #alt-watch9-container {
 padding: 22px 25px 20px 17px;
 }
 [exp-watch9-no-owner] #alt-watch9-container {
-padding: 22px 25px 20px 17px;
+padding: 22px 25px 20px 0px; /*this is custom*/
 }
 @media screen and (min-width: 1496px) and (min-height: 768px){
 [exp-watch9-no-owner] .watch #watch9-slider {
@@ -21879,6 +21879,9 @@ text-decoration: none !important;
 <style>
 #sb-wrapper{
 z-index: 999 !important;
+}
+.gecko .ytp-button-watch-later:not([class*="html5-"]):after, .gecko .ytp-button-prev:after, .gecko .ytp-button-next:after, .gecko .ytp-button-playlist:after {
+    top: 0px !important;
 }
 .oz-default-panel-content{
 min-height: 300px !important; /*costmetic change*/
