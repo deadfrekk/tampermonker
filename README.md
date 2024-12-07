@@ -23,6 +23,8 @@ background: transparent !important;
     }
 }
 </strike>
+
+
 added more, like a fix so that the notification wrapper loads in front of v3 Flash Player instead of under and more aesthetic decisions. i lost a little track.
 
 Link to original project: https://greasyfork.org/en/scripts/485622-startube
